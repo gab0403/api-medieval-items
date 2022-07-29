@@ -9,4 +9,9 @@ export default class ProductsController {
     const productCreated = await this.productsService.createProducts(result);
     res.status(201).json(productCreated);
   };
+
+  public getAllProducts = async (_req:Request, res:Response) => {
+    const getAll = await this.productsService.getAllProducts();
+    res.status(200).json(getAll);
+  };
 }
