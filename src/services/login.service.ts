@@ -12,12 +12,13 @@ export default class LoginService {
   }
   
   public async validateLogin(userCredentials: Users) {
+    if (!userCredentials.username) throw new HttpException(400, '"username" is required');
+    
+    if (!userCredentials.password) throw new HttpException(400, '"password" is required');
+    
     const resultLogin = await 
     this.model.getByUsernameAndPass(userCredentials.username, userCredentials.password);
-    if (!userCredentials.username) throw new HttpException(400, '"username" is required');
-  
-    if (!userCredentials.password) throw new HttpException(400, '"password" is required');
-
+    
     if (resultLogin === undefined) {
       throw new HttpException(401, 'Username or password invalid');
     }
