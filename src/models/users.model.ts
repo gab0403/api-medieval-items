@@ -18,4 +18,14 @@ export default class UsersModel {
     const { insertId } = data;
     return { id: insertId, username, classe, level, password };
   }
+
+  public async getByUsernameAndPass(username: string, password: string): Promise<Users> {
+    const result = await this.connection.execute(
+      'SELECT * FROM Trybesmith.Users WHERE username = ? AND password = ?',
+      [username, password],
+    );
+    const [data] = result;
+    const [user] = data as Users[];
+    return user;
+  }
 }
