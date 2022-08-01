@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import HttpException from '../../validations/httpExeption';
+import HttpException from '../validations/httpExeption';
 
 const httpError = (err: Error, _req: Request, res: Response, next: NextFunction) => {
   const { status, message } = err as HttpException;

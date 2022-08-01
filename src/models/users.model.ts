@@ -24,7 +24,6 @@ export default class UsersModel {
       'SELECT * FROM Trybesmith.Users WHERE username = ? AND password = ?',
       [username, password],
     );
-    console.log(result);
     const [data] = result;
     const [user] = data as Users[];
     return user;

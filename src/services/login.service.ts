@@ -1,7 +1,7 @@
 import connection from '../models/connection';
 import UsersModel from '../models/users.model';
 import Users from '../interfaces/users.interface';
-import HttpException from '../../validations/httpExeption';
+import HttpException from '../validations/httpExeption';
 import createToken from '../middlewares/token.middleware';
 
 export default class LoginService {
