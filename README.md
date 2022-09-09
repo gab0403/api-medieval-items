@@ -7,7 +7,7 @@
   Foram desenvolvidas todas as camadas da aplicação (_Models_, _Service_ e _Controllers_) e por meio dessa aplicação, é possível realizar as operações básicas que se pode fazer em um determinado banco de dados:
   Criação, Leitura, Atualização e Exclusão (ou `CRUD`, para as pessoas mais íntimas 😜 - _Create, Read, Update_ e _Delete_).
 
-  Foi criado alguns _endpoints_ que podem ler e escrever no banco de dados, utilizando **MySQL**.
+  Foram criados alguns _endpoints_ que podem ler e escrever no banco de dados, utilizando **MySQL**.
 
   ---
 
